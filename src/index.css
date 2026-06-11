@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-pitch-green: #0a2a12;
+  --color-electric-lime: #ccff00;
+  --color-charcoal: #121212;
+  --color-board-dark: #121414;
+
+  --font-bebas: "Bebas Neue", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --background-image-pitch-stripes: repeating-linear-gradient(0deg, transparent, transparent 10%, rgba(255, 255, 255, 0.03) 10%, rgba(255, 255, 255, 0.03) 20%);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-board-dark);
+    color: white;
+    font-family: var(--font-inter);
+    overflow: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-bebas);
+    letter-spacing: 0.025em;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
