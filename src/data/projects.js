@@ -16,8 +16,8 @@ const rawProjects = [
     position: "forward",
     jerseyNumber: 9,
     role: "Frontend",
-    liveUrl: "#", // Add live URL if provided later
-    repoUrl: "#",
+    liveUrl: "https://abc-advanced-body-care.vercel.app/", 
+    repoUrl: "https://github.com/mohammed-abdelwhab/abc-advanced-body-care",
     description: "Modern landing page for an advanced body care clinic. Focuses on premium aesthetics and smooth scrolling experiences.",
     stack: ["React", "Tailwind CSS", "Framer Motion"]
   },
@@ -28,7 +28,7 @@ const rawProjects = [
     jerseyNumber: 8,
     role: "Frontend",
     liveUrl: "https://react-reducer-quiz.vercel.app/",
-    repoUrl: "#",
+    repoUrl: "https://github.com/mohammed-abdelwhab/react-reducer-quiz",
     description: "An interactive React quiz application utilizing useReducer for complex state management, custom hooks, and dynamic feedback.",
     stack: ["React", "useReducer", "CSS Modules"]
   },
@@ -38,7 +38,7 @@ const rawProjects = [
     position: "midfielder",
     jerseyNumber: 6,
     role: "Frontend",
-    liveUrl: "https://github.com/mohammed-abdelwhab/movies-app", // Using github URL as live URL wasn't provided, or we can handle it
+    liveUrl: "#", 
     repoUrl: "https://github.com/mohammed-abdelwhab/movies-app",
     description: "A movie database application with custom hooks, fetching data from OMDB API, local storage caching, and detailed movie views.",
     stack: ["React", "OMDB API", "Custom Hooks"]
@@ -50,7 +50,7 @@ const rawProjects = [
     jerseyNumber: 5,
     role: "Frontend",
     liveUrl: "https://mohammed-abdelwhab.github.io/bankist-app/",
-    repoUrl: "#",
+    repoUrl: "https://github.com/mohammed-abdelwhab/bankist-app",
     description: "A minimalist banking application handling transfers, loans, and account closures. Note: Demo login: js/1111 or jd/2222.",
     stack: ["JavaScript", "DOM Manipulation", "CSS"]
   },
@@ -61,7 +61,7 @@ const rawProjects = [
     jerseyNumber: 4,
     role: "Frontend",
     liveUrl: "https://mohammed-abdelwhab.github.io/mapty-app/",
-    repoUrl: "#",
+    repoUrl: "https://github.com/mohammed-abdelwhab/mapty-app",
     description: "Workout tracking application using Geolocation API and Leaflet library to map running and cycling workouts.",
     stack: ["JavaScript", "Leaflet", "Geolocation"]
   },
@@ -70,11 +70,11 @@ const rawProjects = [
     name: "FPL Scout",
     position: "goalkeeper",
     jerseyNumber: 1,
-    role: "Frontend",
-    liveUrl: "https://github.com/mohammed-abdelwhab/fpl-scout",
+    role: "Data Analytics",
+    liveUrl: "#",
     repoUrl: "https://github.com/mohammed-abdelwhab/fpl-scout",
     description: "Fantasy Premier League analytics dashboard providing insights on player forms, upcoming fixtures, and optimal transfers.",
-    stack: ["React", "FPL API", "Tailwind CSS"]
+    stack: ["Python", "FPL API", "Pandas"]
   },
 
 ];

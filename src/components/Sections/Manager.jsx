@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionOverlay from '../shared/SectionOverlay';
+import { Download } from 'lucide-react';
 
 const Manager = () => {
   const stats = [
@@ -18,9 +19,9 @@ const Manager = () => {
         <div className="w-full md:w-1/3 flex flex-col gap-6">
           <div className="relative aspect-square w-full max-w-[240px] mx-auto rounded-full border-4 border-electric-lime overflow-hidden bg-charcoal flex items-center justify-center p-2 shadow-[0_0_20px_rgba(204,255,0,0.2)] group">
             <div className="w-full h-full rounded-full bg-board-dark flex items-center justify-center overflow-hidden relative">
-              {/* Image Placeholder - Place your photo at public/manager.jpg */}
+              {/* Image Placeholder - Place your photo at public/profile-pic.jpeg */}
               <img 
-                src="/manager.jpg" 
+                src="/profile-pic.jpeg" 
                 alt="Manager Profile" 
                 className="w-full h-full object-cover z-10 absolute inset-0"
                 onError={(e) => {
@@ -30,12 +31,18 @@ const Manager = () => {
               {/* Fallback Text if image is missing */}
               <span className="font-bebas text-6xl text-gray-600 absolute">MA</span>
             </div>
-            
-            {/* Hover overlay hint */}
-            <div className="absolute inset-0 bg-black/50 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-full pointer-events-none">
-              <span className="font-mono text-xs text-electric-lime text-center px-4">Place manager.jpg in public/ folder</span>
-            </div>
           </div>
+          
+          <a 
+            href="/resume.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            download
+            className="mt-2 w-full max-w-[240px] mx-auto py-3 bg-electric-lime text-charcoal font-bebas text-xl text-center hover:bg-white transition-colors flex items-center justify-center gap-2 group"
+          >
+            <Download size={20} className="group-hover:-translate-y-1 transition-transform" />
+            DOWNLOAD RESUME
+          </a>
           
           <div className="bg-charcoal border border-outline p-4">
             <h3 className="font-bebas text-2xl text-white mb-4 text-center">MANAGER ATTRIBUTES</h3>
