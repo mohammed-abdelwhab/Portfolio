@@ -66,7 +66,7 @@ const rawProjects = [
     stack: ["React", "OMDB API", "Custom Hooks"],
   },
   {
-    id: 5,
+    id: 6,
     name: "Bankist",
     position: "defender",
     jerseyNumber: 5,
@@ -78,7 +78,7 @@ const rawProjects = [
     stack: ["JavaScript", "DOM Manipulation", "CSS"],
   },
   {
-    id: 6,
+    id: 7,
     name: "Mapty",
     position: "defender",
     jerseyNumber: 4,
@@ -90,7 +90,7 @@ const rawProjects = [
     stack: ["JavaScript", "Leaflet", "Geolocation"],
   },
   {
-    id: 7,
+    id: 8,
     name: "FPL Scout",
     position: "goalkeeper",
     jerseyNumber: 1,
@@ -100,6 +100,18 @@ const rawProjects = [
     description:
       "Fantasy Premier League analytics dashboard providing insights on player forms, upcoming fixtures, and optimal transfers.",
     stack: ["Python", "FPL API", "Pandas"],
+  },
+  {
+    id: 9,
+    name: "WorlWise",
+    position: "forward",
+    jerseyNumber: 14,
+    role: "Frontend",
+    liveUrl: "world-wise-spa-drab.vercel.app",
+    repoUrl: "https://github.com/mohammed-abdelwhab/WorldWise-SPA",
+    description:
+      "A world travel tracker where you can log every city you've visited, add personal notes about your experience, and see your entire journey plotted on an interactive map.",
+    stack: ["React", "React Router", "Leaflet"],
   },
 ];
 
