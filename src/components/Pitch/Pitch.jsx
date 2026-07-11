@@ -9,6 +9,7 @@ const Pitch = () => {
   const midfielders = projects.filter(p => p.position === 'midfielder');
   const defenders = projects.filter(p => p.position === 'defender');
   const goalkeepers = projects.filter(p => p.position === 'goalkeeper');
+  const substitutes = projects.filter(p => p.position === 'substitute' || p.position === 'bench');
 
   const renderRow = (players) => (
     <div className="flex justify-evenly items-center w-full h-[22%]">
@@ -19,7 +20,7 @@ const Pitch = () => {
   );
 
   return (
-    <div className="w-full h-[calc(100vh-64px)] flex flex-col items-center p-4 pt-20 md:pt-8 gap-4 md:gap-8 overflow-y-auto">
+    <div className="w-full h-[calc(100vh-64px)] flex flex-col items-center p-4 pt-20 md:pt-8 gap-4 md:gap-8 overflow-y-auto no-scrollbar">
       
       {/* Welcome Banner */}
       <div className="text-center z-10 flex flex-col items-center gap-2 mt-2 md:mt-4 shrink-0">
@@ -42,7 +43,7 @@ const Pitch = () => {
       </div>
 
       {/* The pitch container maintains a fixed vertical aspect ratio */}
-      <div className="relative w-full max-w-[500px] h-auto aspect-[2/3] sm:aspect-[3/4] bg-pitch-green bg-pitch-stripes border-4 border-white shadow-[0_0_50px_rgba(0,0,0,0.5)] flex flex-col justify-between py-[5%] shrink-0">
+      <div className="relative w-full max-w-[580px] h-auto aspect-[3/4] sm:aspect-[4/5] bg-pitch-green bg-pitch-stripes border-4 border-white shadow-[0_0_50px_rgba(0,0,0,0.5)] flex flex-col justify-between py-[5%] shrink-0">
         
         {/* Pitch Markings SVG */}
         <PitchLines />
@@ -53,6 +54,41 @@ const Pitch = () => {
           {renderRow(midfielders)}
           {renderRow(defenders)}
           {renderRow(goalkeepers)}
+        </div>
+      </div>
+
+      {/* Substitutes Bench Container */}
+      <div className="w-full max-w-[580px] bg-charcoal/60 backdrop-blur-md border border-outline p-4 rounded-xl flex flex-col gap-3 shrink-0 z-10 mb-4 shadow-xl">
+        <div className="flex items-center justify-between border-b border-outline pb-2">
+          <div className="flex items-center gap-2">
+            <div className="w-2.5 h-2.5 rounded-full bg-electric-lime animate-pulse" />
+            <span className="font-mono text-xs uppercase tracking-wider text-gray-300 font-bold">MATCHDAY BENCH</span>
+          </div>
+          <span className="font-mono text-[10px] text-gray-500 font-bold uppercase">{substitutes.length} / 5 SUBSTITUTES</span>
+        </div>
+        
+        <div className="flex justify-evenly items-center gap-2 py-2">
+          {Array.from({ length: 5 }).map((_, idx) => {
+            const sub = substitutes[idx];
+            if (sub) {
+              return (
+                <div key={sub.id} className="flex-1 flex justify-center pointer-events-auto">
+                  <PlayerToken project={sub} index={idx} />
+                </div>
+              );
+            } else {
+              return (
+                <div key={`empty-${idx}`} className="flex-1 flex flex-col items-center justify-center">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border border-dashed border-outline/50 flex items-center justify-center bg-charcoal/30 text-gray-600 transition-colors hover:border-electric-lime/30 hover:bg-charcoal/40">
+                    <span className="font-mono text-[10px] tracking-tighter select-none font-bold">SUB</span>
+                  </div>
+                  <span className="mt-2 text-[9px] font-mono font-bold uppercase tracking-wider text-gray-600 text-center select-none">
+                    EMPTY
+                  </span>
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
       
