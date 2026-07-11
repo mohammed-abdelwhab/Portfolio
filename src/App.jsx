@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider, Outlet, useLocation } from 'react-
 import Pitch from './components/Pitch/Pitch';
 import Scoreboard from './components/Nav/Scoreboard';
 import CustomCursor from './components/shared/CustomCursor';
+import BackgroundAnimation from './components/shared/BackgroundAnimation';
 
 // Lazy load overlays
 const Manager = React.lazy(() => import('./components/Sections/Manager'));
@@ -18,6 +19,7 @@ const RootLayout = () => {
   // Overlays sit on top.
   return (
     <div className="relative w-full h-screen overflow-hidden bg-board-dark">
+      <BackgroundAnimation />
       <CustomCursor />
       
       {/* Top Navigation */}
