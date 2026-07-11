@@ -107,7 +107,7 @@ const rawProjects = [
     position: "forward",
     jerseyNumber: 14,
     role: "Frontend",
-    liveUrl: "world-wise-spa-drab.vercel.app",
+    liveUrl: "https://world-wise-spa-drab.vercel.app",
     repoUrl: "https://github.com/mohammed-abdelwhab/WorldWise-SPA",
     description:
       "A world travel tracker where you can log every city you've visited, add personal notes about your experience, and see your entire journey plotted on an interactive map.",
